@@ -11,6 +11,8 @@ explore api endpoints
 ===
 https://api.shoeboxed.com/v2/explorer/index.html
 
-examples
+legacy (v1) api documentation
 ===
-coming soon
+
+Warning: This api is no longer supported and will soon reach end of life!
+[download legacy api docs](sections/legacy-v1-api-documentation.zip)

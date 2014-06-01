@@ -33,14 +33,21 @@ We are currently using it in production for the following Shoeboxed services:
   + (expected June 2014) relaunched iOS 7 app
   + Shoeboxed Web Clipper
 
+Authentication
+=====
+
+We use OAuth 2 to authenticate API requests.
+
+You will need a Shoeboxed account to provision your OAuth 2 credentials. If you are not a Shoeboxed user, sign up for a "DIY" account which is 100% free.  [Cick here to register for Shoeboxed](https://register.shoeboxed.com/) *A paid Shoeboxed account is __not__ required so you may click the skip button when you see the pricing table!*
+
+
 API Endpoints
 =====
 
-Our [Swagger](https://helloreverb.com/developers/swagger) documentation is the most complete description of all endpoints and parameters. 
+Our [Swagger](https://helloreverb.com/developers/swagger) documentation is the most complete description of all endpoints and parameters. If you plug in your OAuth credentials, you may make test calls to the API without leaving your browser.
 
-Plug in your OAuth credentials and explore our API interactively from your browser:
 
-[Shoeboxed v2 API Endpoints Explorer](https://api.shoeboxed.com/v2/explorer/index.html)
+[Browse Shoeboxed v2 API Endpoints](https://api.shoeboxed.com/v2/explorer/index.html)
 
 
 Support

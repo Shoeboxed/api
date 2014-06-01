@@ -38,8 +38,9 @@ Authentication
 
 We use OAuth 2 to authenticate API requests.
 
-You will need a Shoeboxed account to provision your OAuth 2 credentials. If you are not a Shoeboxed user, sign up for a "DIY" account which is 100% free.  [Cick here to register for Shoeboxed](https://register.shoeboxed.com/) *A paid Shoeboxed account is __not__ required so you may click the skip button when you see the pricing table!*
+Note: You will need a Shoeboxed account to provision your OAuth 2 credentials. If you are not a Shoeboxed user, sign up for a "DIY" account which is 100% free.  [Cick here to register for Shoeboxed](https://register.shoeboxed.com/) *A paid Shoeboxed account is __not__ required so you may click the skip button when you see the pricing table!*
 
+[Generate Your OAuth 2 Credentials](https://app.shoeboxed.com/member/v2/user-settings#api)
 
 API Endpoints
 =====

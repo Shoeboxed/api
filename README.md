@@ -13,7 +13,7 @@ The Shoeboxed v2 API empowers anyone to:
 Beta
 =====
 
-This API is currently in public beta, which means some endpoints may change without much notice. 
+This API is currently in public beta, which means some endpoints may change without notice. 
 
 Please 'Watch' this GitHub repository so that you're automatically notified when this documentation is updated.
 
@@ -54,4 +54,4 @@ We are also available over email: api@team.shoeboxed.com
 Legacy (v1) API Documentation
 ===
 
-Warning: A .zip archive of the old, legacy API docs is provided for *existing* users of the legacy API. We strongly recommend you migrate to API v2 as soon as possible. [OLD API docs archive. Right Click to Download.](sections/legacy-v1-api-documentation.zip)
+Warning: A .zip archive of the old, legacy API docs is provided for *existing* users of the legacy API. We strongly recommend you migrate to API v2 as soon as possible. Please email us at api@team.shoeboxed.com with any questions or concerns. [OLD API docs archive. Right Click to Download.](sections/legacy-v1-api-documentation.zip)

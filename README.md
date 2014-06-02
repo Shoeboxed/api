@@ -41,7 +41,7 @@ Now that you have your own credentials, you may either:
   + use any OAuth 2.0 client library to authenticate requests to our API [View OAuth Urls and Supported Grant Types](sections/authentication.md)
   + or, manually run through the OAuth 2.0 flow [View Step-by-Step Guide](sections/authentication.md) 
 
-If you want to get started quickly making calls against our API, check out [Step-by-Step Oauth 2.0 Guide](sections/authentication.md) 
+If you want to get started quickly making calls against our API, check out [Step-by-Step OAuth 2.0 Guide](sections/authentication.md) 
 
 # API Endpoints
 

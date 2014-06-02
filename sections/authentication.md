@@ -24,6 +24,26 @@ Your app should verify the CSRF token matches the one you previously generated a
 
 ### Step 2: Obtain an access token
 
+To exchange the authorization code for an access token, you need to do a server-side POST to the /token endpoint:
 
+    curl https://api.shoeboxed.com/login/oauth/token -X POST -d code=<authorization code> -d grant_type=authorization_code -u <your client id>:<your client secret>
 
+The response will look like:
+````
+{
+  "access_token": "1cb04374-da51-4394-adaf-ae7d4ee05571",
+  "token_type": "bearer",
+  "expires_in": 21115, // in seconds
+  "scope": "all"
+}
+````
 
+### Step 3: Call the API
+
+Now that you have an access token, you can call any method in the v2 API by just attaching the following header:
+
+    Authorization: Bearer <access token>
+
+As an example, here's how to use curl to get information about the user:
+
+    curl https://api.shoeboxed.com/v2/user -X GET -H 'Authorization: Bearer <user access token>'

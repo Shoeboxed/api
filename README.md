@@ -30,12 +30,18 @@ We are currently using it in production for the following Shoeboxed services:
 
 # Oauth 2
 
-We use OAuth 2 to authenticate all API requests.
+We use OAuth 2 to authenticate all API requests. To get started, generate an OAuth 2.0 client_id and client_secret for your app:
 
 1. Sign up for Shoeboxed if you don't have an account
     + **A paid Shoeboxed account is not required**
     + Sign up for Shoeboxed [here](https://register.shoeboxed.com/). **Tip:** _For a free DIY account, click the 'Maybe Later' button when you reach the pricing page_
-2. [Generate Your OAuth 2 Credentials](https://app.shoeboxed.com/member/v2/user-settings#api)
+2. [Generate Your OAuth 2 Credentials](https://app.shoeboxed.com/member/v2/user-settings#api) Once finished, be sure to copy your client_id and client_secret.
+
+Now that you have your own credentials, you may either:
+  + use any OAuth 2.0 client library to authenticate requests to our API [View OAuth Urls and Supported Grant Types](sections/authentication.md)
+  + or, manually run through the OAuth 2.0 flow [View Step-by-Step Guide](sections/authentication.md) 
+
+If you want to get started quickly making calls against our API, check out [Step-by-Step Oauth 2.0 Guide](sections/authentication.md) 
 
 # API Endpoints
 

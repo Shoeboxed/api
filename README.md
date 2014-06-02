@@ -1,5 +1,4 @@
-Shoeboxed Api v2
-===
+# Shoeboxed Api v2
 
 The Shoeboxed v2 API empowers anyone to:
   + securely integrate Shoeboxed user data seamlessly into your web, mobile or desktop application
@@ -8,18 +7,14 @@ The Shoeboxed v2 API empowers anyone to:
   + whitelabel or build on top of our receipt and document processing system (some business conditions apply)
   + create new ways for Shoeboxed users to add receipts, business cards, or documents
   + .. and much more!
-  
 
-Beta
-=====
+## Beta
 
-This API is currently in public beta, which means some endpoints may change without notice. 
+This API is currently in public beta, which means endpoints may change without notice. 
 
 Please 'Watch' this GitHub repository so that you're automatically notified when this documentation is updated.
 
-
-Is this API Production ready?
-======
+## Is this API Production ready?
 
 We are currently using it in production for the following Shoeboxed services:
 
@@ -33,33 +28,29 @@ We are currently using it in production for the following Shoeboxed services:
   + (expected June 2014) relaunched iOS 7 app
   + Shoeboxed Web Clipper
 
-Authentication
-=====
+# Oauth 2
 
-We use OAuth 2 to authenticate API requests.
+We use OAuth 2 to authenticate all API requests.
 
-Note: You will need a Shoeboxed account to provision your OAuth 2 credentials. If you are not a Shoeboxed user, sign up for a "DIY" account which is 100% free.  [Cick here to register for Shoeboxed](https://register.shoeboxed.com/) *A paid Shoeboxed account is __not__ required so you may click the skip button when you see the pricing table!*
+1. Sign up for Shoeboxed if you don't have an account
+    + **A paid Shoeboxed account is not required**
+    + Sign up for Shoeboxed [here](https://register.shoeboxed.com/). **Tip:** _For a free DIY account, click the 'Maybe Later' button when you reach the pricing page_
+2. [Generate Your OAuth 2 Credentials](https://app.shoeboxed.com/member/v2/user-settings#api)
 
-[Generate Your OAuth 2 Credentials](https://app.shoeboxed.com/member/v2/user-settings#api)
-
-API Endpoints
-=====
+# API Endpoints
 
 Our [Swagger](https://helloreverb.com/developers/swagger) documentation is the most complete description of all endpoints and parameters. If you plug in your OAuth credentials, you may make test calls to the API without leaving your browser.
-
 
 [Browse Shoeboxed v2 API Endpoints](https://api.shoeboxed.com/v2/explorer/index.html)
 
 
-Support
-=======
+# Support
 
 Feature requests? Bugs? Please file a Github issue.
 
 We are also available over email: api@team.shoeboxed.com
 
 
-Legacy (v1) API Documentation
-===
+## Legacy (v1) API Support
 
 Warning: A .zip archive of the old, legacy API docs is provided for *existing* users of the legacy API. We strongly recommend you migrate to API v2 as soon as possible. Please email us at api@team.shoeboxed.com with any questions or concerns. [OLD API docs archive. Right Click to Download.](sections/legacy-v1-api-documentation.zip)

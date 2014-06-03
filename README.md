@@ -12,11 +12,11 @@ The Shoeboxed v2 API empowers developers to:
   + create new ways for Shoeboxed users to add receipts, business cards, or documents
   + .. and much more!
 
-## Language support
+## Libraries
 
-Our API is only offered at this time over HTTP. In other words, we do not offer wrapper libraries at this time.
+Our API is only offered at this time as a HTTP web service. We do not provide native libraries or wrappers. 
 
-Eventually, we plan on releasing client libraries in all popular languages.
+If you write a library for our API, we'd love to add a link! Please email the repo url to api@team.shoeboxed.com
 
 ## Is this api production ready?
 

@@ -1,6 +1,6 @@
 # Shoeboxed Api v2 (beta!)
 
-The new Shoeboxed API is a full-featured RESTful web-service that uses OAuth 2.0 for authentication.
+**The new Shoeboxed API is a full-featured RESTful web-service that uses OAuth 2.0 for authentication.**
 
 Everything is self-service: All you need is a free Shoeboxed account to get started!
 

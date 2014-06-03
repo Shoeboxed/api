@@ -1,8 +1,8 @@
 # Shoeboxed Api v2 (beta!)
 
-**The new Shoeboxed API is a full-featured RESTful web-service that uses OAuth 2.0 for authentication.**
+**The new Shoeboxed API is a full-featured RESTful web service that uses OAuth 2.0 for authentication.**
 
-Everything is self-service: All you need is a free Shoeboxed account to get started!
+Everything is self-serve: All you need is a free Shoeboxed account to get started!
 
 The Shoeboxed v2 API empowers developers to:
   + securely integrate Shoeboxed user data seamlessly into your web, mobile or desktop application
@@ -12,8 +12,13 @@ The Shoeboxed v2 API empowers developers to:
   + create new ways for Shoeboxed users to add receipts, business cards, or documents
   + .. and much more!
 
+## Language support
 
-## Is this API Production ready?
+Our API is only offered at this time over HTTP. In other words, we do not offer wrapper libraries at this time.
+
+Eventually, we plan on releasing client libraries in all popular languages.
+
+## Is this api production ready?
 
 This API is in **public beta**. In other words, please use at your own risk and absolutely no warranties or guarantees are expressed or implied.
 
@@ -31,11 +36,11 @@ Shoeboxed is currently using this API in production for the following products a
   + (expected June 2014) relaunched iOS 7 app
   + Shoeboxed Web Clipper
 
-## Watch this repository to stay in the loop
-
 We recommend that you 'Watch' this GitHub repository so that you're automatically notified when this documentation is updated.
 
 # Getting Started
+
+## Authentication
 
 We use OAuth 2 to authenticate all API requests. To get started, generate an OAuth 2.0 client_id and client_secret for your app:
 
@@ -50,7 +55,7 @@ Now that you have your own credentials, you may either:
 
 If you want to get started as fast as possible making calls against our API, check out [Step-by-Step OAuth 2.0 Guide](sections/authentication.md)
 
-# Browse API
+## API endpoints
 
 We use Swagger to provide an interactive API explorer that both documents the functionality of our API and allows you to make test calls directly from your browser. 
 

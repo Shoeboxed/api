@@ -69,6 +69,9 @@ Feature requests? Bugs? Please file a Github issue.
 
 We are also available over email: api@team.shoeboxed.com
 
+# API Terms of Service
+
+[View API Terms of Service](sections/terms.md)
 
 ## Legacy (v1) API Support
 

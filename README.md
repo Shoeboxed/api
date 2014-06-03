@@ -21,7 +21,7 @@ We are 'dogfooding' this API. All new Shoeboxed functionality is built by our de
 
 Shoeboxed is currently using this API in production for the following products and features:
 
-  + Gmail Receipt Synce
+  + Gmail Receipt Sync
   + All new user registration
   + In all new screens in our web application, including:
     + Web-based receipt & document uploader

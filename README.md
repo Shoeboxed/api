@@ -1,6 +1,10 @@
-# Shoeboxed Api v2
+# Shoeboxed Api v2 (beta!)
 
-The Shoeboxed v2 API empowers anyone to:
+The new Shoeboxed API is a full-featured RESTful web-service that uses OAuth 2.0 for authentication.
+
+Everything is self-service: All you need is a free Shoeboxed account to get started!
+
+The Shoeboxed v2 API empowers developers to:
   + securely integrate Shoeboxed user data seamlessly into your web, mobile or desktop application
   + extend Shoeboxed's core functionality
   + leverage Shoeboxed's receipt data and/or OCR for your product
@@ -8,17 +12,16 @@ The Shoeboxed v2 API empowers anyone to:
   + create new ways for Shoeboxed users to add receipts, business cards, or documents
   + .. and much more!
 
-## Beta
-
-This API is currently in public beta, which means endpoints may change without notice. 
-
-Please 'Watch' this GitHub repository so that you're automatically notified when this documentation is updated.
 
 ## Is this API Production ready?
 
-We are currently using it in production for the following Shoeboxed services:
+This API is in **public beta**. In other words, please use at your own risk and absolutely no warranties or guarantees are expressed or implied.
 
-  + Gmail Receipt Sync
+We are 'dogfooding' this API. All new Shoeboxed functionality is built by our developers using this API, so it is in *everyone's* interests to minimize breaking changes.
+
+Shoeboxed is currently using this API in production for the following products and features:
+
+  + Gmail Receipt Synce
   + All new user registration
   + In all new screens in our web application, including:
     + Web-based receipt & document uploader
@@ -28,27 +31,32 @@ We are currently using it in production for the following Shoeboxed services:
   + (expected June 2014) relaunched iOS 7 app
   + Shoeboxed Web Clipper
 
-# Oauth 2
+## Watch this repository to stay in the loop
+
+We recommend that you 'Watch' this GitHub repository so that you're automatically notified when this documentation is updated.
+
+# Getting Started
 
 We use OAuth 2 to authenticate all API requests. To get started, generate an OAuth 2.0 client_id and client_secret for your app:
 
 1. Sign up for Shoeboxed if you don't have an account
     + **A paid Shoeboxed account is not required**
     + Sign up for Shoeboxed [here](https://register.shoeboxed.com/). **Tip:** _For a free DIY account, click the 'Maybe Later' button when you reach the pricing page_
-2. [Generate Your OAuth 2 Credentials](https://app.shoeboxed.com/member/v2/user-settings#api) Once finished, be sure to copy your client_id and client_secret.
+2. [Generate Your OAuth 2 Credentials](https://app.shoeboxed.com/member/v2/user-settings#api) Once finished, be sure to copy your client_id and client_secret and store them somewhere secure.
 
 Now that you have your own credentials, you may either:
   + use any OAuth 2.0 client library to authenticate requests to our API [View OAuth Urls and Supported Grant Types](sections/authentication.md)
   + or, manually run through the OAuth 2.0 flow [View Step-by-Step Guide](sections/authentication.md) 
 
-If you want to get started quickly making calls against our API, check out [Step-by-Step OAuth 2.0 Guide](sections/authentication.md) 
+If you want to get started as fast as possible making calls against our API, check out [Step-by-Step OAuth 2.0 Guide](sections/authentication.md)
 
-# API Endpoints
+# Browse API
 
-Our [Swagger](https://helloreverb.com/developers/swagger) documentation is the most complete description of all endpoints and parameters. If you plug in your OAuth credentials, you may make test calls to the API without leaving your browser.
+We use Swagger to provide an interactive API explorer that both documents the functionality of our API and allows you to make test calls directly from your browser. 
 
-[Browse Shoeboxed v2 API Endpoints](https://api.shoeboxed.com/v2/explorer/index.html)
+[Browse API Endpoints (you will leave GitHub)](https://api.shoeboxed.com/v2/explorer/index.html)
 
+**Tip:** Plug in a valid OAuth access token to make calls to our API from the documentation without leaving your browser.
 
 # Support
 

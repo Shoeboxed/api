@@ -26,7 +26,7 @@ Your app should verify the CSRF token matches the one you previously generated a
 
 To exchange the authorization code for an access token, you need to do a server-side POST to the /token endpoint:
 
-    curl https://api.shoeboxed.com/login/oauth/token -X POST -d code=<authorization code> -d grant_type=authorization_code -u <your client id>:<your client secret>
+    curl https://api.shoeboxed.com/login/oauth/token -X POST -d code=<authorization code> -d grant_type=authorization_code --data-urlencode 'redirect_uri=<your site>' -u <your client id>:<your client secret>
 
 The response will look like:
 ````

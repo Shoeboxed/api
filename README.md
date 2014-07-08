@@ -105,6 +105,13 @@ signature = base64.b64encode(hmac.new(secret, token, digestmod=hashlib.sha256).d
 print(signature)
 ```
 
+Your application that receives the notification must return a status code in the
+200s. If it does not, or if we encounter any other network error, then we will
+retry the notification up to 10 times, in increasing intervals. The exact times
+at which we will retry the notification are `2^n * 90`, where `n` is the number
+of retries between 1 and 10; the resulting number is the number of seconds after
+the original notification at which we will attempt to retry.
+
 In the near future, we will also support sending notifications for document
 status changes for users that have granted access to a particular API application,
 instead of only tracking status changes for documents that have been created by

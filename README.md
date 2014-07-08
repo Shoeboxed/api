@@ -67,8 +67,9 @@ We use Swagger to provide an interactive API explorer that both documents the fu
 
 We provide notifications for documents as they go through Shoeboxed processing.
 Fill in a desired notification URL for your [API client](https://app.shoeboxed.com/member/v2/user-settings#api),
-and any documents created by your API client will send notifications to that URL
-as it moves through the processing pipeline.
+and any documents that belong to Shoeboxed users who have granted access to your
+application will be sent notifications of its status changes as it moves through
+the processing pipeline.
 
 The notifications look like this:
 
@@ -111,11 +112,6 @@ retry the notification up to 10 times, in increasing intervals. The exact times
 at which we will retry the notification are `2^n * 90`, where `n` is the number
 of retries between 1 and 10; the resulting number is the number of seconds after
 the original notification at which we will attempt to retry.
-
-In the near future, we will also support sending notifications for document
-status changes for users that have granted access to a particular API application,
-instead of only tracking status changes for documents that have been created by
-one.
 
 # Support
 

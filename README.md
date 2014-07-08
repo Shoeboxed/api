@@ -68,7 +68,7 @@ We use Swagger to provide an interactive API explorer that both documents the fu
 We provide notifications for documents as they go through Shoeboxed processing.
 Fill in a desired notification URL for your [API client](https://app.shoeboxed.com/member/v2/user-settings#api),
 and any documents that belong to Shoeboxed users who have granted access to your
-application will be sent notifications of its status changes as it moves through
+application will trigger notifications of its status changes as it moves through
 the processing pipeline.
 
 The notifications look like this:

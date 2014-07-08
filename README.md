@@ -63,6 +63,53 @@ We use Swagger to provide an interactive API explorer that both documents the fu
 
 **Tip:** Plug in a valid OAuth access token to make calls to our API from the documentation without leaving your browser.
 
+## Webhook notifications
+
+We provide notifications for documents as they go through Shoeboxed processing.
+Fill in a desired notification URL for your [API client](https://app.shoeboxed.com/member/v2/user-settings#api),
+and any documents created by your API client will send notifications to that URL
+as it moves through the processing pipeline.
+
+The notifications look like this:
+
+```json
+{
+    "DocumentId": "5319ef30e4b0aeb0ce0da7b0",
+    "InserterId": "your inserter id",
+    "Event": "processed",
+    "Token": "XWGAsFADpPjHg70GTIvhB7EpoOjsWIduMMoc8j8vhG94bJEAam",
+    "Signature": "miUJlR4KROB9GNfDpjIfR1Yje9qNXlK9yPkk4SMHsvU="
+}
+```
+
+`InserterId` is the client-side identifying marker that was provided when the
+document was created. This field is optional; if it was not present at the time
+of document creation, then the field will not exist in the notification.
+
+`Event` is one of `created` or `processed`.
+
+`Token` is a 50-character random alphanumeric string; `Signature` is the HMAC
+of the token, using SHA-256 as the hash function and your API client secret as
+the key, and finally base64-encoded. This serves to verify that the notification
+is from Shoeboxed.
+
+An example of computing the signature using the token and client secret usnig
+Python 2.7:
+
+```python
+import hashlib, hmac, base64
+
+token = b'provided token here'
+secret = b'api client secret here'
+signature = base64.b64encode(hmac.new(secret, token, digestmod=hashlib.sha256).digest())
+print(signature)
+```
+
+In the near future, we will also support sending notifications for document
+status changes for users that have granted access to a particular API application,
+instead of only tracking status changes for documents that have been created by
+one.
+
 # Support
 
 Feature requests? Bugs? Please file a Github issue.

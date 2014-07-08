@@ -93,7 +93,7 @@ of the token, using SHA-256 as the hash function and your API client secret as
 the key, and finally base64-encoded. This serves to verify that the notification
 is from Shoeboxed.
 
-An example of computing the signature using the token and client secret usnig
+An example of computing the signature using the token and client secret using
 Python 2.7:
 
 ```python

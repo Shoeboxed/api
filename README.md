@@ -76,16 +76,11 @@ The notifications look like this:
 ```json
 {
     "DocumentId": "5319ef30e4b0aeb0ce0da7b0",
-    "InserterId": "your inserter id",
     "Event": "processed",
     "Token": "XWGAsFADpPjHg70GTIvhB7EpoOjsWIduMMoc8j8vhG94bJEAam",
     "Signature": "miUJlR4KROB9GNfDpjIfR1Yje9qNXlK9yPkk4SMHsvU="
 }
 ```
-
-`InserterId` is the client-side identifying marker that was provided when the
-document was created. This field is optional; if it was not present at the time
-of document creation, then the field will not exist in the notification.
 
 `Event` is one of `created` or `processed`.
 

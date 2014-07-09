@@ -75,10 +75,10 @@ The notifications look like this:
 
 ```json
 {
-    "DocumentId": "5319ef30e4b0aeb0ce0da7b0",
-    "Event": "processed",
-    "Token": "XWGAsFADpPjHg70GTIvhB7EpoOjsWIduMMoc8j8vhG94bJEAam",
-    "Signature": "miUJlR4KROB9GNfDpjIfR1Yje9qNXlK9yPkk4SMHsvU="
+    "documentId": "5319ef30e4b0aeb0ce0da7b0",
+    "event": "processed",
+    "token": "XWGAsFADpPjHg70GTIvhB7EpoOjsWIduMMoc8j8vhG94bJEAam",
+    "signature": "miUJlR4KROB9GNfDpjIfR1Yje9qNXlK9yPkk4SMHsvU="
 }
 ```
 

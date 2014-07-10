@@ -8,7 +8,7 @@ We will email all developers whenever there are potentially breaking changes. We
 June 20, 2014
 -------------
 
-After July 27, backwards compatibility for old property names will be removed. 
+After August 10th, backwards compatibility for old property names will be removed. 
 
 1. Deleted Properties
 

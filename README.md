@@ -63,6 +63,51 @@ We use Swagger to provide an interactive API explorer that both documents the fu
 
 **Tip:** Plug in a valid OAuth access token to make calls to our API from the documentation without leaving your browser.
 
+## Webhook notifications
+
+We provide notifications for documents as they go through Shoeboxed processing.
+Fill in a desired notification URL for your [API client](https://app.shoeboxed.com/member/v2/user-settings#api),
+and any documents that belong to Shoeboxed users who have granted access to your
+application will trigger notifications of its status changes as it moves through
+the processing pipeline.
+
+The notifications look like this:
+
+```json
+{
+    "documentId": "5319ef30e4b0aeb0ce0da7b0",
+    "event": "processed",
+    "token": "XWGAsFADpPjHg70GTIvhB7EpoOjsWIduMMoc8j8vhG94bJEAam",
+    "signature": "miUJlR4KROB9GNfDpjIfR1Yje9qNXlK9yPkk4SMHsvU="
+}
+```
+
+`Event` is one of `created` or `processed`.
+
+`Token` is a 50-character random alphanumeric string; `Signature` is the HMAC
+of the token, using SHA-256 as the hash function and your API client secret as
+the key, and finally base64-encoded. This serves to verify that the notification
+is from Shoeboxed.
+
+An example of computing the signature using the token and client secret using
+Python 2.7:
+
+```python
+import hashlib, hmac, base64
+
+token = b'provided token here'
+secret = b'api client secret here'
+signature = base64.b64encode(hmac.new(secret, token, digestmod=hashlib.sha256).digest())
+print(signature)
+```
+
+Your application that receives the notification must return a status code in the
+200s. If it does not, or if we encounter any other network error, then we will
+retry the notification up to 10 times, in increasing intervals. The exact times
+at which we will retry the notification are `2^n * 90`, where `n` is the number
+of retries between 1 and 10; the resulting number is the number of seconds after
+the original notification at which we will attempt to retry.
+
 # Support
 
 Feature requests? Bugs? Please file a Github issue.

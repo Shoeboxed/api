@@ -6,6 +6,8 @@ When we delete or rename fields, we strive to support both old and new field nam
 June 20, 2014
 -------------
 
+After July 27, backwards compatibility for old property names will be removed. 
+
 1. Deleted Properties
 
    Please remove usage of the following properties:

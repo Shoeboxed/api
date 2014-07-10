@@ -3,6 +3,8 @@ Changelog
 
 When we delete or rename fields, we strive to support both old and new field names for 30 days.
 
+We will email all developers whenever there are potentially breaking changes. We will send an email to the email address associated with your developer Shoeboxed account. Note: If you have opted out of our communications, you won't get an email update.
+
 June 20, 2014
 -------------
 

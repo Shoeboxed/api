@@ -3,7 +3,11 @@ Shoeboxed API Authentication
 
 All API requests must be authenticated by passing along an OAuth 2.0 token.
 
-By default, Shoeboxed supports the "code grant" which is the standard grant type for apps with a server-side component like web apps. If needed, we can manually enable the "implicit grant" flow for you if you are creating a client-side app such as a mobile app or JS app. Drop us a line at api@team.shoeboxed.com
+Shoeboxed supports two Oauth 2.0 grant types:
+  - the "code grant" which is the standard grant type for apps with a server-side component like web apps.
+  - the "implicit grant" flow for you if you are creating a client-side app such as a mobile app or browser extension
+
+We can enable other Oauth 2 grant types upon request. Please email api@team.shoeboxed.com
 
 ## Using the code grant
 

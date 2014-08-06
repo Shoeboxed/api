@@ -15,7 +15,7 @@ We can enable other Oauth 2 grant types upon request. Please email api@team.shoe
 
 Direct the user to the OAuth 2.0 authorization endpoint:
 
-    https://api.shoeboxed.com/login/oauth/authorize?client_id=<your client id>&response_type=code&redirect_uri=<your site>&state=<CSRF token>
+    https://id.shoeboxed.com/oauth/authorize?client_id=<your client id>&response_type=code&scope=all&redirect_uri=<your site>&state=<CSRF token>
     
 We strongly recommend you use the state parameter to prevent cross-site request forgery (CSRF). You should generate a random CSRF token, store a copy in user's session, then verify it (see below) to prevent forgery.
 
@@ -30,7 +30,7 @@ Your app should verify the CSRF token matches the one you previously generated a
 
 To exchange the authorization code for an access token, you need to do a server-side POST to the /token endpoint:
 
-    curl https://api.shoeboxed.com/login/oauth/token -X POST -d code=<authorization code> -d grant_type=authorization_code --data-urlencode 'redirect_uri=<your site>' -u <your client id>:<your client secret>
+    curl https://id.shoeboxed.com/oauth/token -X POST -d code=<authorization code> -d grant_type=authorization_code --data-urlencode 'redirect_uri=<your site>' -u <your client id>:<your client secret>
 
 The response will look like:
 ````

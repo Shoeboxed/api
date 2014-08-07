@@ -5,6 +5,18 @@ When we delete or rename fields, we strive to support both old and new field nam
 
 We will email all developers whenever there are potentially breaking changes. We will send an email to the email address associated with your developer Shoeboxed account. Note: If you have opted out of our communications, you won't get an email update.
 
+# August 7, 2014
+
+With the implementation of a single sign-on service, OAuth2 base URLs have
+changed from [https://api.shoeboxed.com/login/](https://api.shoeboxed.com/login/)
+to [https://id.shoeboxed.com/login/](https://id.shoeboxed.com/login/). The old
+URL will be supported in parallel for one month, until September 7; afterwards,
+requests to it will return a 301 redirect to the new URL.
+
+We recommend that you change your OAuth2 base URL as soon as possible. Any paths
+under the base URL do not change; e.g. [https://api.shoeboxed.com/login/oauth/authorize](https://api.shoeboxed.com/login/oauth/authorize)
+is now [https://id.shoeboxed.com/oauth/authorize].
+
 June 20, 2014
 -------------
 

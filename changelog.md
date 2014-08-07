@@ -8,7 +8,7 @@ We will email all developers whenever there are potentially breaking changes. We
 ## August 7, 2014
 
 With the implementation of a single sign-on service, OAuth2 base URLs have
-changed from `https://api.shoeboxed.com/login/` to `https://id.shoeboxed.com/login/`.
+changed from `https://api.shoeboxed.com/login/` to `https://id.shoeboxed.com`.
 The old URL will be supported in parallel for one month, until September 7;
 afterwards, requests to it will return a 301 redirect to the new URL.
 

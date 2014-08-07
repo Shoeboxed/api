@@ -16,6 +16,10 @@ We recommend that you change your OAuth2 base URL as soon as possible. Any paths
 under the base URL do not change; e.g. `https://api.shoeboxed.com/login/oauth/authorize`
 is now `https://id.shoeboxed.com/oauth/authorize`.
 
+Note that the URL for actual API calls do not change; the base URL for that is
+still `https://api.shoeboxed.com/v2/`. The only thing that changed is the endpoint
+for the OAuth2 process.
+
 June 20, 2014
 -------------
 

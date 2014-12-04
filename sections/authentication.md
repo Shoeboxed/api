@@ -30,13 +30,13 @@ Your app should verify the CSRF token matches the one you previously generated a
 
 To exchange the authorization code for an access token, you need to do a server-side POST to the /token endpoint:
 
-    ```bash
-    $ curl -v -XPOST https://id.shoeboxed.com/oauth/token \
-        -d code=<authorization code> \
-        -d grant_type=authorization_code \
-        --data-urlencode redirect_uri='<your site>' \
-        -u <your client id>:<your client secret>
-    ```
+```bash
+$ curl -v -XPOST https://id.shoeboxed.com/oauth/token \
+    -d code=<authorization code> \
+    -d grant_type=authorization_code \
+    --data-urlencode redirect_uri='<your site>' \
+    -u <your client id>:<your client secret>
+```
 
 The response will look like:
 
@@ -56,13 +56,13 @@ later.
 
 ### Step 2a: Using a refresh token to get a new access token
 
-    ```bash
-    $ curl -v -XPOST https://id.shoeboxed.com/oauth/token \
-        -d grant_type=refresh_token \
-        -d client_id=<your client id> \
-        -d client_secret=<your client secret> \
-        -d refresh_token=<your refresh token>
-    ```
+```bash
+$ curl -v -XPOST https://id.shoeboxed.com/oauth/token \
+    -d grant_type=refresh_token \
+    -d client_id=<your client id> \
+    -d client_secret=<your client secret> \
+    -d refresh_token=<your refresh token>
+```
 
 You will get a response like:
 

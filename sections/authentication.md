@@ -30,17 +30,50 @@ Your app should verify the CSRF token matches the one you previously generated a
 
 To exchange the authorization code for an access token, you need to do a server-side POST to the /token endpoint:
 
-    curl https://id.shoeboxed.com/oauth/token -X POST -d code=<authorization code> -d grant_type=authorization_code --data-urlencode 'redirect_uri=<your site>' -u <your client id>:<your client secret>
+    ```bash
+    $ curl -v -XPOST https://id.shoeboxed.com/oauth/token \
+        -d code=<authorization code> \
+        -d grant_type=authorization_code \
+        --data-urlencode redirect_uri='<your site>' \
+        -u <your client id>:<your client secret>
+    ```
 
 The response will look like:
-````
+
+```json
 {
   "access_token": "1cb04374-da51-4394-adaf-ae7d4ee05571",
+  "refresh_token": "b162991a-d3e0-4509-a86c-8dcd3f624475",
   "token_type": "bearer",
-  "expires_in": 21115, // in seconds
+  "expires_in": 1800, // in seconds
   "scope": "all"
 }
-````
+```
+
+Access tokens are short-lived, in keeping with OAuth2 best practices. It is a
+good idea to persist the refresh token so that you can renew your access token
+later.
+
+### Step 2a: Using a refresh token to get a new access token
+
+    ```bash
+    $ curl -v -XPOST https://id.shoeboxed.com/oauth/token \
+        -d grant_type=refresh_token \
+        -d client_id=<your client id> \
+        -d client_secret=<your client secret> \
+        -d refresh_token=<your refresh token>
+    ```
+
+You will get a response like:
+
+```json
+{
+    "access_token": "e1a7470d-4e10-4cfc-87c6-08464b0a5fc2",
+    "expires_in": 1800,
+    "scope": "all",
+    "token_type": "bearer"
+}
+```
 
 ### Step 3: Call the API
 

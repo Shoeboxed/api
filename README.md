@@ -1,8 +1,8 @@
-# Shoeboxed Api v2 (beta)
+# Shoeboxed API
 
-**The new Shoeboxed API is a full-featured RESTful web service that uses OAuth 2.0 for authentication.**
+**The Shoeboxed API is a full-featured RESTful web service that uses OAuth 2.0 for authentication.**
 
-Everything is self-serve: All you need is a free Shoeboxed account to get started!
+Everything is self-serve: All you need is a Shoeboxed account to get started!
 
 The Shoeboxed v2 API empowers developers to:
   + securely integrate Shoeboxed user data seamlessly into your web, mobile or desktop application
@@ -18,25 +18,9 @@ Our API is only offered at this time as a HTTP web service. We do not provide na
 
 If you write a library for our API, we'd love to add a link! Please email the repo url to api@team.shoeboxed.com
 
-## Is this api production ready?
+## Is this API production ready?
 
-This API is in **public beta**. In other words, please use at your own risk and absolutely no warranties or guarantees are expressed or implied.
-
-We are 'dogfooding' this API. All new Shoeboxed functionality is built by our developers using this API, so it is in *everyone's* interests to minimize breaking changes.
-
-Shoeboxed is currently using this API in production for the following products and features:
-
-  + Gmail Receipt Sync
-  + All new user registration
-  + In all new screens in our web application, including:
-    + Web-based receipt & document uploader
-    + Account Settings
-    + User Settings
-    + New Receipt Tables
-  + (expected June 2014) relaunched iOS 7 app
-  + Shoeboxed Web Clipper
-
-We recommend that you 'Watch' this GitHub repository so that you're automatically notified when this documentation is updated.
+Yes, this API is production ready. We are "dogfooding" the API, and all Shoeboxed functionality is built by our developers using this API, so it is in *everyone's* interests to minimize breaking changes.
 
 # Getting Started
 
@@ -45,8 +29,7 @@ We recommend that you 'Watch' this GitHub repository so that you're automaticall
 We use OAuth 2 to authenticate all API requests. To get started, generate an OAuth 2.0 client_id and client_secret for your app:
 
 1. Sign up for Shoeboxed if you don't have an account
-    + **A paid Shoeboxed account is not required**
-    + Sign up for Shoeboxed [here](https://register.shoeboxed.com/). **Tip:** _For a free DIY account, click the 'Maybe Later' button when you reach the pricing page_
+    + Contact us if you would like a limited-purpose dev account
 2. [Generate Your OAuth 2 Credentials](https://app.shoeboxed.com/member/v2/user-settings#api) Once finished, be sure to copy your client_id and client_secret and store them somewhere secure.
 
 Now that you have your own credentials, you may either:
@@ -110,7 +93,7 @@ the original notification at which we will attempt to retry.
 
 # Support
 
-Feature requests? Bugs? Please file a Github issue.
+Feature requests? Bugs? Please file a GitHub issue.
 
 We are also available over email: api@team.shoeboxed.com
 
